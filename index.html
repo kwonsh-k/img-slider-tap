@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Shadow Map Slider</title>
+  
+ <link rel="stylesheet" href="css/image-slider.css">
+ <script defer src="js/image-slider.js"></script>
+  <script>
+    // === 사용자 설정 영역 ===
+    const imageUrls = [
+      "images/before.png",
+      "images/after.png"
+    ];
+
+    const align = "left";                 // "left", "center", "right"
+    const imageWidth = 800;               // 단위: px
+    const sliderLabelText = "참고이미지이며, 최종작업물이 아닙니다.";
+    // =========================
+  </script>
+
+</head>
+<body>
+
+<div class="wrapper" id="wrapper">
+  <div class="container" id="container">
+    <div class="image-wrapper" id="image-wrapper"></div>
+    <input type="range" id="slider">
+    <div class="slider-label-wrapper">
+      <div class="slider-label" id="slider-label"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
