@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Image Comparison Slider</title>
+  
+  <!-- 외부 라이브러리 -->
+  <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
+  
+  <!-- 커스텀 스타일 및 스크립트 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kwonsh-k/img-slider-tap@main/css/image-comparison.css">
+  <script defer src="https://cdn.jsdelivr.net/gh/kwonsh-k/img-slider-tap@main/js/image-comparison.js"></script>
+  
+  <script>
+    // === 사용자 설정 영역 ===
+    const imageUrls = [
+      "images/before.png",
+      "images/after.png"
+    ];
+
+    const align = "center";               // "left", "center", "right"
+    const imageWidth = 800;               // 단위: px
+    const hoverEnabled = true;            // hover 효과 활성화
+    // =========================
+  </script>
+
+</head>
+<body>
+
+  <div id="loader" class="loader-msg">Loading images...</div>
+
+  <img-comparison-slider id="my-slider"></img-comparison-slider>
+
+</body>
+</html>
