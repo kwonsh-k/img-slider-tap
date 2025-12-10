@@ -8,6 +8,15 @@
   const widthVal = window.imageWidth ? window.imageWidth + 'px' : '800px';
   const alignVal = (window.align || 'center').toLowerCase();
   const hoverVal = window.hoverEnabled || false;
+  
+  // 라벨 설정 가져오기
+  const labelTextBefore = window.labelTextBefore || 'Before';
+  const labelTextAfter = window.labelTextAfter || 'After';
+  const labelSize = window.labelSize || '20px';
+  const labelColorBefore = window.labelColorBefore || 'black';
+  const labelColorAfter = window.labelColorAfter || 'red';
+  const labelOutlineColor = window.labelOutlineColor || 'white';
+  const handleSize = window.handleSize || '100px';
 
   loader.style.maxWidth = widthVal;
 
@@ -21,15 +30,22 @@
     alignVal === 'center' ? 'center' : (alignVal === 'right' ? 'flex-end' : 'flex-start');
 
   slider.style.maxWidth = widthVal;
+  slider.style.setProperty('--default-handle-width', handleSize);
 
   slider.innerHTML = `
     <figure slot="first" class="image-wrapper">
       <img src="${beforeUrl}" />
-      <span class="label label-before">Before</span>
+      <span class="slider-label label-before" 
+            style="font-size: ${labelSize}; color: ${labelColorBefore}; -webkit-text-stroke: 2px ${labelOutlineColor};">
+        ${labelTextBefore}
+      </span>
     </figure>
     <figure slot="second" class="image-wrapper">
       <img src="${afterUrl}" />
-      <span class="label label-after">After</span>
+      <span class="slider-label label-after" 
+            style="font-size: ${labelSize}; color: ${labelColorAfter}; -webkit-text-stroke: 2px ${labelOutlineColor};">
+        ${labelTextAfter}
+      </span>
     </figure>
   `;
 

@@ -69,5 +69,19 @@ img-comparison-slider {
   paint-order: stroke fill;
 }
 
+/* 라벨 공통 스타일 (커스터마이징 가능) */
+.slider-label {
+  position: absolute;
+  top: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  paint-order: stroke fill;
+}
+
 .label-before { left: 20px; }
 .label-after { right: 20px; }
